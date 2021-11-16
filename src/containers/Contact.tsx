@@ -22,7 +22,7 @@ const Contact = () => {
           href="mailto:sam@iamasamwich.com?subject=Hi%20there!"
           className="link"
         >
-          sam@iamasamwich.com
+          Email me
         </a>
       </div>
     </div>

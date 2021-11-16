@@ -1,8 +1,72 @@
 import React from 'react';
+import Project from './Project';
+
+import clock from '../images/clock.png';
+import cycle from '../images/CycleTracker.jpg';
+import todo from '../images/todo.png';
+import ttt from '../images/ttt3d.png';
 
 const Projects = () => {
+
+  const projects = [
+    {
+      name: "Things To Do",
+      blurb: [
+        'While busting new ground in the realms of hyper-creativity I made this Todo App.',
+        'This was built using Typescript on top of both the Node/Express/MySQL server and React front end.',
+        'Once a user has created an account they can add a Todo with a due date and any sub-steps required, then see a countdown until the task is due and the number of steps completed.'
+      ],
+      gitLink: 'https://github.com/Iamasamwich/todo-server',
+      appLink: 'http://things-to-do-todo-app.herokuapp.com/',
+      tech: ['node', 'express', 'typescript','react', 'redux', 'mysql'],
+      image: todo 
+    },
+    {
+      name: 'Cycle Tracker',
+      blurb: [
+        'I made this app to track a users fitness over time from distance based activities.',
+        'A user can enter the date, time, distance, their weight, and some notes from their workout sessions, which is then displayed in graph form.',
+        'Cycle Tracker was styles with Semantic UI, and uses Recharts for the graphs.',
+        '** Please note that this app was designed for use on mobile only **'
+      ],
+      gitLink: 'https://github.com/Iamasamwich/fitness_track_server',
+      appLink: 'https://cycletrack.herokuapp.com/',
+      tech: ['node', 'express', 'react', 'redux', 'mysql'],
+      image: cycle
+    },
+    {
+      name: 'Tic Tac Toe 3D',
+      blurb: [
+        'This is a 3-dimensional Tic Tac Toe game, using 3 boards stacked on top of each other.',
+        'Users can now get three in a row by going down through the boards, meaning there are now 49 winning combinations instead of the 8 on a single board.',
+      ],
+      gitLink: 'https://github.com/Iamasamwich/ttt3d',
+      appLink: 'https://ttt3d.herokuapp.com/',
+      tech: ['react', 'js', 'html', 'css'],
+      image: ttt
+    },
+    {
+      name: 'Clock Dinger',
+      blurb: [
+        'This is a clock app, designed to be run in fullscreen mode and left on one of your workspaces.',
+        'Opening the burger menu will let the user select how often they want the chime to sound: never, or every 15, 30, or 60 minutes.'
+      ],
+      gitLink: 'https://github.com/Iamasamwich/clock-dinger',
+      appLink: 'https://clockdinger.herokuapp.com',
+      tech: ['react', 'js', 'html', 'css'],
+      image: clock
+    }
+  ];
+
+
+
   return (
-    <div className="panel">Projects</div>
+    <div className="panel">
+      <h2 className="panel-heading">My Projects</h2>
+      {projects.map(project => {
+        return <Project details={project} />
+      })}
+    </div>
   );
 };
 

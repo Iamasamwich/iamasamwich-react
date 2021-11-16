@@ -11,10 +11,19 @@ const App = () => {
     <div className="container">
       <NavBar />
       <Heading />
+      <hr />
       <Contact />
+      <hr />
       <Skills />
+      <hr />
       <About />
+      <hr />
       <Projects />
+      <hr />
+      <footer>
+        {'\u00a9'} Sam Humphreys 2021
+      </footer>
+
     </div>
 
 

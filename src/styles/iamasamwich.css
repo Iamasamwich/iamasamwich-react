@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: row;
 
-  background-color: lightslategrey;
+  background-color: lightsteelblue;
 }
 
 .nav-button {
@@ -30,7 +30,7 @@
 }
 
 .nav-button:hover {
-  background-color: rgb(64, 83, 102);
+  background-color: cadetblue;
 }
 
 .panel {
@@ -39,9 +39,6 @@
   flex-direction: column;
   padding: 40px 10px 40px;
   margin-bottom: 20px;
-
-  background-color: lightyellow;
-  border: 1px solid grey;
 }
 
 #heading {
@@ -117,8 +114,8 @@
 
 .skill-small {
   width: 10%;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .skill-small > img {
@@ -126,7 +123,7 @@
 }
 
 .skill-small > p {
-  font-size: .7em;
+  font-size: .5em;
 }
 
 .panel > p {
@@ -135,6 +132,50 @@
 
 p > span {
   padding-left: 2em;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  border-radius: 0.5em;
+  background-color: rgb(231, 231, 231);
+}
+
+.project > div {
+  width: 48%;
+}
+
+.project-title {
+  margin: 1em 0 1em 1em;
+}
+
+.project-info > p {
+  margin-bottom: 1em;
+  font-size: .7em;
+}
+
+.project-info .bold {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.project-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.project-image > img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+footer {
+  text-align: center;
+  font-size: .5em;
 }
 
 

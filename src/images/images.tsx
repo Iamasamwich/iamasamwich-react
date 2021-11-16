@@ -17,6 +17,7 @@ import officeImg from './msoffice.png';
 import phpImg from './php.svg';
 import rubyImg from './ruby.png';
 import pgImg from './postgresql.png';
+import githubImg from './github-icon.png';
 
 const clock = {
   img: clockImg,
@@ -113,5 +114,9 @@ const pg = {
   name: "PostgreSQL"
 };
 
+const github = {
+  img: githubImg,
+  name: 'Github'
+};
 
-export {clock, things, cycle, ttt, node, express, rct, redux, ts, js, html, css, jq, mysql, git, office, php, ruby, pg};
+export {clock, things, cycle, ttt, node, express, rct, redux, ts, js, html, css, jq, mysql, git, office, php, ruby, pg, github};

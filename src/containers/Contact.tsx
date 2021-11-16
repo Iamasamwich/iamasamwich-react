@@ -5,7 +5,7 @@ import email from '../images/email-icon.png';
 const Contact = () => {
 
   return (
-    <div className="panel">
+    <div className="panel" id="contact">
       <h2 className="panel-heading">Contact</h2>
       <div className="contact">
         <img src={phone} alt="phone" />

@@ -16,18 +16,15 @@ const Skills = () => {
   ];
 
   return (
-    <div className="panel">
+    <div className="panel" id="skills">
       <h2 className="panel-heading">Skills</h2>
-      {bigSkills.map(row => {
+      {bigSkills.map((row,  i) => {
         return (
-          <div className="skill-row">
+          <div className="skill-row" key={i}>
             {
-              row.map(skill => {
-                console.log('====================================');
-                console.log(skill);
-                console.log('====================================');
+              row.map((skill, i) => {
                 return (
-                  <div className="skill skill-big">
+                  <div className="skill skill-big" key={i}>
                     <img src={skill.img} alt={skill.name} />
                     <p>{skill.name}</p>
                   </div>
@@ -37,13 +34,13 @@ const Skills = () => {
           </div>
         )
       })}
-      {smallSkills.map(row => {
+      {smallSkills.map((row, i) => {
         return (
-          <div className="skill-row small-skills">
+          <div className="skill-row small-skills" key={i}>
             {
-              row.map(skill => {
+              row.map((skill, i) => {
                 return (
-                  <div className="skill skill-small">
+                  <div className="skill skill-small" key={i}>
                     <img src={skill.img} alt={skill.name} />
                     <p>{skill.name}</p>
                   </div>

@@ -1,12 +1,34 @@
 import React from 'react';
 
 const NavBar = () => {
+
+  const handleScroll = (elem : string) => {
+    if (elem === 'contact') {
+      window.scrollTo({top: 0});
+    } else {
+      const target = document.querySelector(`#${elem}`) as HTMLElement;
+      window.scrollTo({top: target.offsetTop});
+    };
+  };
+
   return (
     <div className="navbar">
-      <div className="nav-button">Contact</div>
-      <div className="nav-button">Skills</div>
-      <div className="nav-button">About</div>
-      <div className="nav-button">Projects</div>
+      <div 
+        className="nav-button"
+        onClick={() => handleScroll('contact')}
+      >Contact</div>
+      <div 
+        className="nav-button"
+        onClick={() => handleScroll('skills')}
+      >Skills</div>
+      <div 
+        className="nav-button"
+        onClick={() => handleScroll('about')}
+      >About</div>
+      <div 
+        className="nav-button"
+        onClick={() => handleScroll('projects')}
+      >Projects</div>
     </div>
   );
 };

@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+#root {
+  min-width: 425px;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -148,6 +152,10 @@ p > span {
   background-color: rgb(241, 241, 241);
 }
 
+.project:last-of-type {
+  margin-bottom: 0;
+}
+
 .project > div {
   width: 48%;
 }
@@ -210,6 +218,61 @@ footer {
   text-align: center;
   font-size: .5em;
 }
+
+@media only screen and (max-width: 960px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .panel {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .project {
+    flex-direction: column-reverse;
+  }
+
+  .project > div {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .project-image > img {
+    max-height: 400px;
+  }
+
+  .project-title {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  * {
+    font-size: 1rem;
+  }
+
+  .skill-big > img {
+    height: 100px;
+  }
+
+  .skill-small > img {
+    height: 70px;
+  }
+
+  .project-link > p {
+    font-size: 1.5em;
+  }
+
+  .project-link > img {
+    height: 25px;
+  }
+
+  .project-info > .skill-row > .skill > img {
+    height: 50px;
+  }
+}
+
 
 
 
